@@ -5,17 +5,12 @@
 # Hint: remember that with object oriented programming the object holds values in the attributes to describe it's current state. Even when we aren't reading it's attributes, they should be up to date.
 class Tree
   attr_reader :rings
-  def initialize
-    @rings = 0
-    @fruits = false
+  def initialize(rings)
+    @rings = rings
   end
 
   def bear_fruit?
-    if @rings > 7 and @rings < 15
-      @fruits = true
-    else
-      @Fruits = false
-    end
+    rings > 7 and rings < 15
   end
 
   def winter_season
